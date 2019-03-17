@@ -4,13 +4,13 @@
       <i class="weui-loading"></i>
       <span class="weui-loadmore__tips">正在加载</span>
     </div>
-    <frame :menuItems="menus" v-else> </frame>
+    <frame :menuItems="menus" short-name="网站管理" v-else> </frame>
   </div>
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex';
-import Frame from '@/layouts/frame';
+import Frame from '@lib/layouts/frame';
 
 export default {
   components: {
