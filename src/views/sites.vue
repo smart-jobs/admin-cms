@@ -107,5 +107,5 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-@import '~@/style/lite.less';
+@import '~@lib/style/lite.less';
 </style>
