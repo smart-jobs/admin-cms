@@ -25,7 +25,7 @@ export const actions = {
 
     const { page = 1, size = pageSize } = paging;
     const skip = Math.max(0, (page - 1) * size);
-    const res = await this.$axios.$get(api.query, { column, skip, size });
+    const res = await this.$axios.$get(api.query, { column, skip, limit: size });
     if (res.errcode === 0) {
       commit(types.LOADED, res);
     } else {
