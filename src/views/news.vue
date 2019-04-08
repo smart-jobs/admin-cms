@@ -14,6 +14,7 @@
         @query="handleQuery"
         @edit="handleEdit"
         @delete="handleDelete"
+        @restore="handleRestore"
         @preview="handlePreview"
       >
         <template slot="post">

@@ -45,7 +45,7 @@ module.exports = {
         target: 'http://smart.jilinjobswx.cn',
       },
       '/ddapi': {
-        target: 'http://smart.chinahuian.cn',
+        target: 'http://smart.jilinjobswx.cn',
         // target: 'http://smart.localhost:8008',
         // pathRewrite: { '^/ddapi': '' },
       },

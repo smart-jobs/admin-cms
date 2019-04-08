@@ -50,7 +50,7 @@ const items = [
         icon: 'column',
       },
       {
-        title: '新闻快讯',
+        title: '就业快讯',
         path: '/news/flash',
         icon: 'column',
       },

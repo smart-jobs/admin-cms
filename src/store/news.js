@@ -8,6 +8,7 @@ const api = {
   delete: '/cms/news/delete',
   fetch: '/cms/news/fetch',
   query: '/cms/news/query',
+  restore: '/cms/news/restore',
 };
 // initial state
 export const state = () => ({
@@ -50,7 +51,13 @@ export const actions = {
   },
   async delete({ commit }, { id, column }) {
     const res = await this.$axios.$post(api.delete, {}, { id, column });
-    if (res.errcode === 0) commit(types.DELETED, { id });
+    // if (res.errcode === 0) commit(types.DELETED, { id });
+    if (res.errcode === 0) commit(types.UPDATED, res.data);
+    return res;
+  },
+  async restore({ commit }, { id, column }) {
+    const res = await this.$axios.$post(api.restore, {}, { id, column });
+    if (res.errcode === 0) commit(types.UPDATED, res.data);
     return res;
   },
 };
